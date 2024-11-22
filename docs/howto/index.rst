@@ -3,7 +3,6 @@ How-to guides
 
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
 
-   self
-
+   launchpad/index
