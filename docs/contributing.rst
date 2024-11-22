@@ -1,3 +1,5 @@
+.. SPDX-License-Identifier: CC-BY-SA-4.0
+
 :orphan:
 
 .. TODO: Replace all mentions of ACME with your project name
