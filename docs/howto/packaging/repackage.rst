@@ -9,8 +9,8 @@ PPA afterwards.
 The following steps will be needed.
 
 
-Download deb files
-------------------
+Download Debian packages
+------------------------
 
 * In a browser navigate to the private PPA containing the Debian packages.
 * Download all architecture independent \*_all.deb files.
@@ -57,15 +57,13 @@ Create source file
     cp -R ../source_packaging/xorg-server-21.1.13/debian/ \
           ../binary_packaging/xorg-server-21.1.13/
 
-Edit debian packaging
+Edit Debian packaging
 ---------------------
 
 * Remove directory debian/patches/
 
 * In debian/control Remove all build dependencies (Build-Depends:,
   Build-Depends-Indep:) but debhelper-compat.
-
-* In debian/control remove all \*-dev packages as they contain source.
 
 * Change debian/source/format to
 
@@ -85,4 +83,12 @@ Edit debian packaging
 * Change the debian/docs and debian/\*.docs files to point to the correct source
   paths in usr/share/docs.
 
-* Check for missing files and add these to /debian/\*.install.
+Validate the Debian packaging
+-----------------------------
+
+* Submit the package to a different PPA to avoid version numbering collisions.
+
+* Check for build failure and fix these.
+
+* Check for missing files in the Debian packages and add these to
+  /debian/\*.install.
