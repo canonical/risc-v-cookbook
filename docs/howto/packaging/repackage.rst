@@ -16,8 +16,8 @@ Download Debian packages
 * Download all architecture independent \*_all.deb files.
 * Download all \*.deb files for the relevant architectures.
 
-Create source file
-------------------
+Create source of binary package
+-------------------------------
 
 * Extract all debian Packages to a directory matching the source package name
   and the version.
@@ -50,12 +50,12 @@ Create source file
 
       tar -cJf xorg-server_21.1.13.orig.tar.xz xorg-server-21.1.13/
 
-* Copy the debian packaging
+* Copy the debian packaging from the source package
 
   .. code:: bash
 
-    cp -R ../source_packaging/xorg-server-21.1.13/debian/ \
-          ../binary_packaging/xorg-server-21.1.13/
+    cp -R /path/to/source/package/xorg-server-21.1.13/debian \
+          xorg-server-21.1.13/
 
 Edit Debian packaging
 ---------------------
