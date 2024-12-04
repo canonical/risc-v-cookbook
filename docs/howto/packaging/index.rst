@@ -6,4 +6,5 @@ Packaging
 .. toctree::
    :maxdepth: 2
 
+   package
    repackage
