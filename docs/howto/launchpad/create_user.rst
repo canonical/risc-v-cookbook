@@ -49,6 +49,8 @@ you can find a button labeled *OpenPGP keys:* or you can directly navigate to
 
 Enter your fingerprint and press the *Import Key* button.
 
+.. _add-ssh-key:
+
 Add SSH key
 -----------
 

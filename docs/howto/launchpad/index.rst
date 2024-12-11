@@ -11,3 +11,4 @@ Launchpad
    create_ppa
    upload_ppa
    consume_ppa
+   create_git
