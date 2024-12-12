@@ -9,3 +9,4 @@ How-to guides
 
    launchpad/index
    packaging/index
+   images/index
