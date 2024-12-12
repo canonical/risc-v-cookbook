@@ -15,9 +15,10 @@ To create a PPA:
 * Under the section *Personal package archives*, click *Create a new PPA*. Note that for
   private teams, only team administrators can access this option.
 * Fill the *URL* and *Display name*. Try to give it a meaningful name.
-  For example, it can be of the type *package-type-lpbug-description*:
-    - **URL**: postfix-sru-lp1753470-segfault
-    - **Display name**: postfix-fix-lp1753470-segfault
+  For example, it can be of the type *package-lpbug-description*:
+
+  1. **URL**: postfix-lp1753470-segfault
+  2. **Display name**: postfix-lp1753470-segfault
 * Click *Activate*. The PPA is now created.
 * Go to the newly-created PPA page at
   https://launchpad.net/~<username or team>/+archive/ubuntu/<PPA URL>, click *Change Details*,
