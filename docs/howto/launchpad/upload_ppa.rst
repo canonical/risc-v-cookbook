@@ -11,7 +11,14 @@ please refer to :doc:`Create PPAs <create_ppa>`
 
 To upload to an existing PPA:
 
-* Set up your GPG and SSH keys as explained in :doc:`Create Launchpad user <create_user>`.
+* For uploading via sftp your SSH key must have been provided to Launchpad
+  as described in :doc:`Create Launchpad user <create_user>`.
+* Install the upload tool dput
+
+  .. prompt:: bash $ auto
+
+    sudo apt-get install dput
+
 * Navigate to your Debian package source directory. This is the directory where the
   debian/ folder is.
 * Ensure that the Debian version is correctly set up. See :ref:`Debian version numbering`.
