@@ -3,9 +3,54 @@
 RISC-V Image Cookbook
 =====================
 
-Intro
+The RISC-V Image Cookbook is meant to help users to spin Ubuntu based images
+for hardware that is not yet supported by the Ubuntu distribution.
 
----------
+It will guide you through these steps of your project:
+
+* Collect requirements
+* Setup Launchpad
+* Build packages
+* Build the image
+
+Collect requirements
+--------------------
+
+For getting started you will have to create an overview of which aspects
+of current Ubuntu does not fullfill your needs. Typical items are:
+
+* vendor Linux kernel
+* vendor Xorg and Mesa packages
+* vendor U-Boot required on the image
+* additional packages
+* configuration files
+
+Next identify the licenses and other legal requirements like non-disclosure
+aggreements of the extra required packages.
+
+If source code must not be disclosed to the public,
+private personal package archives (PPAs) on Launchpad can be used.
+
+Setup Launchpad
+---------------
+
+Build packages
+--------------
+
+Build the image
+---------------
+
+
+Contributing
+------------
+
+The RISC-V Image Cookbook is community effort and welcomes community projects,
+contributions, suggestions, fixes and constructive feedback.
+
+To contribute create an issue or merge request on
+https://github.com/canonical/risc-v-cookbook.git.
+
+-----
 
 :h2:`In this documentation`
 
@@ -49,17 +94,3 @@ Intro
       :link-type: doc
 
       **Discussion and clarification** of key topics
-
----------
-
-Project and community
----------------------
-
-Example Project is a member of the Ubuntu family. It’s an open source project that warmly welcomes community projects, contributions, suggestions, fixes and constructive feedback.
-
-* Code of conduct
-* Get support
-* Join our online chat
-* Contribute
-* Roadmap
-* Thinking about using Example Product for your next project? Get in touch!
