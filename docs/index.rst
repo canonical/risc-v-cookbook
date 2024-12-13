@@ -48,7 +48,7 @@ The RISC-V Image Cookbook is community effort and welcomes community projects,
 contributions, suggestions, fixes and constructive feedback.
 
 To contribute create an issue or merge request on
-https://github.com/canonical/risc-v-cookbook.git.
+https://github.com/canonical/risc-v-cookbook.
 
 -----
 
