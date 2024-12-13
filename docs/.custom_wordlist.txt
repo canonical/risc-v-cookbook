@@ -1,9 +1,7 @@
-aggreements
 artifacts
 autodetection
 Autotools
 buildpackage
-certfificate
 changelog
 CMake
 compat
@@ -16,12 +14,10 @@ debhelper
 Debhelper
 debian
 debmake
-defintion
 DEP
 dh
 dpkg
 dput
-fullfill
 github
 gz
 https
@@ -47,7 +43,6 @@ rsa
 sftp
 SPDX
 standardized
-tabe
 ubuntu
 Untar
 untarred

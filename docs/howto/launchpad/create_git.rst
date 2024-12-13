@@ -60,5 +60,5 @@ Browse git repositories
 The git repositories are listed at
 `https://code.launchpad.net/~<team_or_user>/+git`.
 
-You can navigate from the team or user home page by opening the `Code` tabe
+You can navigate from the team or user home page by opening the `Code` tab
 and clicking the `View Git repositories` link.

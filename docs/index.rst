@@ -17,7 +17,7 @@ Collect requirements
 --------------------
 
 For getting started you will have to create an overview of which aspects
-of current Ubuntu does not fullfill your needs. Typical items are:
+of current Ubuntu does not fulfill your needs. Typical items are:
 
 * vendor Linux kernel
 * vendor Xorg and Mesa packages
@@ -26,7 +26,7 @@ of current Ubuntu does not fullfill your needs. Typical items are:
 * configuration files
 
 Next identify the licenses and other legal requirements like non-disclosure
-aggreements of the extra required packages.
+agreements of the extra required packages.
 
 If source code must not be disclosed to the public,
 private personal package archives (PPAs) on Launchpad can be used.

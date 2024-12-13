@@ -16,7 +16,7 @@ Add public key certificate
 To upload code to Launchpad your code must be signed by a public key
 certificate.
 
-You could use an existing certfificate or create a new OpenPGP key pair:
+You could use an existing certificate or create a new OpenPGP key pair:
 
 .. prompt:: bash $ auto
 

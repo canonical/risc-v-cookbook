@@ -6,7 +6,7 @@ Create Image With ubuntu-image
 For creating an image with ubuntu-image we need
 
 * a git repository with the gadget definition
-* a image defintion file image-definition.yaml which may be located in the same
+* a image definition file image-definition.yaml which may be located in the same
   git repository
 
 Install ubuntu-image
