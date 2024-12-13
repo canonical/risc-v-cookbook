@@ -21,6 +21,8 @@ concurrency:
 
 jobs:
   build:
+    with:
+      working-directory: "/docs"
     name: build
     runs-on: ubuntu-latest
     steps:
