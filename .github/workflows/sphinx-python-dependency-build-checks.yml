@@ -22,7 +22,7 @@ concurrency:
 jobs:
   build:
     with:
-      working-directory: "/docs"
+      working-directory: "${GITHUB_WORKSPACE}/docs"
     name: build
     runs-on: ubuntu-latest
     steps:
