@@ -7,4 +7,4 @@ Tutorials
 .. toctree::
    :maxdepth: 1
 
-   self
+   create_image
