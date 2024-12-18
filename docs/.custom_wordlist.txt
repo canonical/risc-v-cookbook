@@ -19,7 +19,10 @@ dh
 dpkg
 dput
 fulfill
+gibibytes
 github
+GPT
+GUID
 gz
 https
 imagedefinition
@@ -30,6 +33,8 @@ Keyid
 labeled
 lp
 lpbug
+MBR
+mebibytes
 newteam
 OpenPGP
 organize
@@ -45,9 +50,12 @@ rsa
 runtime
 samp
 sftp
+snapd
+Snapd
 SPDX
 standardized
 ubuntu
+unformatted
 Untar
 untarred
 usr

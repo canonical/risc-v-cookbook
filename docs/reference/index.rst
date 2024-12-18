@@ -7,4 +7,5 @@ Reference
 .. toctree::
    :maxdepth: 1
 
+   gadget-definition
    image-definition
