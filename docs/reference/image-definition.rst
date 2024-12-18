@@ -21,7 +21,7 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | |-ref (string)
     | |-target (string)
     | |-branch (string)
-    | |-type (string) enum=git,enum=directory,enum=prebuilt
+    | |-type (string) enum:git,directory,prebuilt
     | |-url (string) type=string,format=uri
     |-model-assertion (string) type=string,format=uri
     |-rootfs (*imagedefinition.Rootfs)
@@ -29,7 +29,7 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | |-archive (string)
     | |-flavor (string)
     | |-mirror (string)
-    | |-pocket (string) enum=release,enum=Release,enum=updates,enum=Updates,enum=security,enum=Security,enum=proposed,enum=Proposed
+    | |-pocket (string) enum:release,Release,updates,Updates,security,Security,proposed,Proposed
     | |-seed (*imagedefinition.Seed) oneof_required=Seed
     | | |-branch (string)
     | | |-urls ([]string) type=array,format=uri
@@ -43,7 +43,7 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | |-sources-list-deb822 (*bool)
     |-customization (*imagedefinition.Customization)
     | |-components ([]string)
-    | |-pocket (string) enum=release,enum=Release,enum=updates,enum=Updates,enum=security,enum=Security,enum=proposed,enum=Proposed
+    | |-pocket (string) enum:release,Release,updates,Updates,security,Security,proposed,Proposed
     | |-installer (*imagedefinition.Installer)
     | | |-preseeds ([]string)
     | | |-layers ([]string)
@@ -88,7 +88,7 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | | | |-name (string)
     | | | |-id (string)
     | | | |-password (string)
-    | | | |-password-type (string) enum=text,enum=hash
+    | | | |-password-type (string) enum:text,hash
     |-artifacts (*imagedefinition.Artifact)
     | |-img (*[]imagedefinition.Img)
     | | |-name (string)
@@ -108,5 +108,5 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | | |-name (string)
     | |-rootfs-tarball (*imagedefinition.RootfsTar)
     | | |-name (string)
-    | | |-compression (string) enum=uncompressed,enum=bzip2,enum=gzip,enum=xz,enum=zstd
-    |-class (string) enum=preinstalled,enum=cloud,enum=installer
+    | | |-compression (string) enum:uncompressed,bzip2,gzip,xz,zstd
+    |-class (string) enum:preinstalled,cloud,installer
