@@ -32,10 +32,30 @@ Consuming private PPAs
 To consume a private PPA, access must be granted by the PPA owner. To check a private PPA:
 
 * Go to the Launchpad user page :samp:`https://launchpad.net/~{<username>}`
-* Go to "View your private PPA subscriptions" in the PPA section
-* Click "View" in the PPA you wish to consume
-* Copy the source lines into a file
-  ``/etc/apt/sources.list.d/<your-private-ppa>.list``
+* The link "View your private PPA subscriptions" in the PPA section get you
+  to :samp:`https://launchpad.net/~{username}/+archivesubscriptions`
+* Click "View" in the PPA you wish to consume.
+  You will see two lines like in the example below:
+
+  .. code:: text
+
+      deb https://johndoe:RZ5mq1R0XVlZ5ZJW102g@private-ppa.launchpadcontent.net/my-private-team/myppa/ubuntu plucky main #Personal access of John Doe (johndoe) to My PPA
+      deb-src https://johndoe:RZ5mq1R0XVlZ5ZJW102g@private-ppa.launchpadcontent.net/my-private-team/myppa/ubuntu plucky main #Personal access of John Doe (johndoe) to My PPA
+
+  In the example
+
+  * ``deb`` refers to binary packages
+  * ``deb-src`` refers to package sources
+  * ``johndoe`` is the user name
+  * ``RZ5mq1R0XVlZ5ZJW102`` is the password
+  * ``my-private-team`` is the name of a team
+  * ``myppa`` is the name of the PPA
+  * ``plucky`` is an Ubuntu release
+  * ``main`` is the component of the Ubuntu repository
+
+* Copy the lines into a file
+  :samp::`/etc/apt/sources.list.d/{team-name}-{ppa-name}>.list`
+* Adjust the Ubuntu release as needed.
 * Update the sources:
 
   .. prompt:: bash $ auto
