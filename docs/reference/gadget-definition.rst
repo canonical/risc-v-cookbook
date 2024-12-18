@@ -20,7 +20,7 @@ Here is a list of the field hierarchy as of Snapd 2.67:
     | | |-structure ([]VolumeStructure)
     | | | |-name (string)
     | | | |-type (string)
-    | | | |-filesystem (string) enum:ext4,vfat,vfat-16,vat32
+    | | | |-filesystem (string) enum:ext4,vfat,vfat-16,vat-32
     | | | |-filesystem-label (string)
     | | | |-min-size (Size)
     | | | |-size (Size)
