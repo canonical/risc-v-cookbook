@@ -22,6 +22,7 @@ fulfill
 github
 gz
 https
+imagedefinition
 Incrementing
 Indep
 Initialize
@@ -42,6 +43,7 @@ repo
 risc
 rsa
 runtime
+samp
 sftp
 SPDX
 standardized
