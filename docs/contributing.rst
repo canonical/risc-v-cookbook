@@ -41,10 +41,10 @@ License and copyright
 .. TODO: Update with your license details or drop if excessive
 
 By default, all contributions to ACME are made under the AGPLv3 license.
-See the `licence <https://github.com/canonical/ACME/blob/main/COPYING>`_
+See the `license <https://github.com/canonical/ACME/blob/main/COPYING>`_
 in the ACME GitHub repository for details.
 
-All contributors must sign the `Canonical contributor licence agreement
+All contributors must sign the `Canonical contributor license agreement
 <https://ubuntu.com/legal/contributors>`_,
 which grants Canonical permission to use the contributions.
 The author of a change remains the copyright owner of their code
@@ -209,7 +209,7 @@ Structure
   Check that coupled code elements, files and directories are adjacent.
   For instance, store test data close to the corresponding test code.
 
-- **Group variable declaration and initialisation**:
+- **Group variable declaration and initialization**:
   Declare and initialize variables together
   to improve code organization and readability.
 
