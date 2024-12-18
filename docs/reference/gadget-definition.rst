@@ -37,9 +37,6 @@ Here is a list of the field hierarchy as of Snapd 2.67:
     | | | | |-offset (*Offset)
     | | | | |-size (Size)
     | | | | |-unpack (bool)
-    | | | |-update (VolumeUpdate)
-    | | | | |-edition (Number)
-    | | | | |-preserve ([]string)
 
 The structure.type field can have as value:
 
