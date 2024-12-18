@@ -6,39 +6,43 @@ Gadget.yaml fields
 The available fields of the gadget.yaml file are defined in
 https://github.com/canonical/snapd/blob/master/gadget/gadget.go
 
-Here is a list of the field hierarchy as of Snapd 2.67:
+A description is provided in section Gadget.yaml - Specification of
+https://snapcraft.io/docs/the-gadget-snap.
+
+Here is a list of relevant part of the field hierarchy as of Snapd 2.67:
 
 .. code-block:: text
 
     -volumes,omitempty (map[string]*Volume)
-    | |-Key (string)
-    | | Value (*Volume)
-    | | |-partial,omitempty ([]PartialProperty)
-    | | |-schema (string) enum:emmc,gpt,mbr
-    | | |-bootloader (string) enum:android-boot,grub,lk,piboot
-    | | |-id (string)
-    | | |-structure ([]VolumeStructure)
-    | | | |-name (string)
-    | | | |-type (string)
-    | | | |-filesystem (string) enum:ext4,vfat,vfat-16,vat-32
-    | | | |-filesystem-label (string)
-    | | | |-min-size (Size)
-    | | | |-size (Size)
-    | | | |-offset (*Offset)
-    | | | |-offset-write (*RelativeOffset)
-    | | | | |-relative-to (string)
-    | | | | |-offset (Offset)
-    | | | |-role (string) enum:system-boot,system-data,system-seed,system-seed-null,system-save
-    | | | |-id (string)
-    | | | |-content ([]VolumeContent)
-    | | | | |-source (string)
-    | | | | |-target (string)
-    | | | | |-image (string)
-    | | | | |-offset (*Offset)
-    | | | | |-size (Size)
-    | | | | |-unpack (bool)
+     |-<Key> (string)
+     | <Value> (*Volume)
+     | |-partial,omitempty ([]PartialProperty)
+     | |-schema (string) enum:emmc,gpt,mbr
+     | |-bootloader (string) enum:android-boot,grub,lk,piboot
+     | |-id (string)
+     | |-structure ([]VolumeStructure)
+     | | |-name (string)
+     | | |-type (string)
+     | | |-filesystem (string) enum:ext4,vfat,vfat-16,vat-32
+     | | |-filesystem-label (string)
+     | | |-min-size (Size)
+     | | |-size (Size)
+     | | |-offset (*Offset)
+     | | |-offset-write (*RelativeOffset)
+     | | | |-relative-to (string)
+     | | | |-offset (Offset)
+     | | |-role (string) enum:system-boot,system-data,system-seed,system-seed-null,system-save
+     | | |-id (string)
+     | | |-content ([]VolumeContent)
+     | | | |-source (string)
+     | | | |-target (string)
+     | | | |-image (string)
+     | | | |-offset (*Offset)
+     | | | |-size (Size)
+     | | | |-unpack (bool)
 
-The structure.type field can have as value:
+
+The type field can have as value:
 
 * The string :samp:`bare`.
   This indicates an unformatted partition, e.g. for placing firmware.
