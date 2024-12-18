@@ -14,17 +14,17 @@ Consuming public PPAs
 
 To consume a public PPA, add it to your system with the following commands:
 
-  .. code:: bash
+  .. prompt:: bash $ auto
 
-    sudo add-apt-repository ppa:<team or username>/<ppa name>
-    sudo apt update
+    $ sudo add-apt-repository ppa:<team or username>/<ppa name>
+    $ sudo apt update
 
 After adding the PPA and updating the package list, you can install the desired package using
 `apt`:
 
-  .. code:: bash
+  .. prompt:: bash $ auto
 
-    sudo apt install <package_name>
+    $ sudo apt install <package_name>
 
 Consuming private PPAs
 -----------------------
@@ -38,27 +38,28 @@ To consume a private PPA, access must be granted by the PPA owner. To check a pr
   ``/etc/apt/sources.list.d/<your-private-ppa>.list``
 * Update the sources:
 
-  .. code:: bash
+  .. prompt:: bash $ auto
 
-    sudo apt update
+    $ sudo apt update
 
-* ``apt`` should complain that the public key used to sign the packages in the private PPA is
-  missing from the system with a message similar to:
+* ``apt`` may complain that the public key used to sign the packages in the
+  private PPA is missing from the system with a message similar to:
 
   .. code:: text
 
-    The following signatures couldn't be verified because the public key is not available: NO_PUBKEY 0123456789012345
+    The following signatures couldn't be verified because
+    the public key is not available: NO_PUBKEY 0123456789012345
 
   To resolve this, the PPA's public key needs to be imported:
 
-  .. code:: bash
+  .. prompt:: bash $ auto
 
-    gpg --keyserver keyserver.ubuntu.com --recv-keys 0123456789012345
-    gpg --export 0123456789012345 > /etc/apt/trusted.gpg.d/<your-private-ppa>.gpg
-    sudo apt update
+    $ gpg --keyserver keyserver.ubuntu.com --recv-keys 0123456789012345
+    $ gpg --export 0123456789012345 > /etc/apt/trusted.gpg.d/<your-private-ppa>.gpg
+    $ sudo apt-get update
+
 * The packages from the private PPA should now be available via ``apt``:
 
-  .. code:: bash
+  .. prompt:: bash $ auto
 
-    sudo apt install <package_name>
-
+    $ sudo apt install <package_name>
