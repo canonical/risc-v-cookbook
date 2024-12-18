@@ -29,6 +29,7 @@ imagedefinition
 Incrementing
 Indep
 Initialize
+io
 Keyid
 labeled
 lp
@@ -50,6 +51,7 @@ rsa
 runtime
 samp
 sftp
+snapcraft
 snapd
 Snapd
 SPDX
