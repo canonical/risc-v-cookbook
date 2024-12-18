@@ -4,8 +4,8 @@ Consuming Public and Private PPAs
 =================================
 
 PPAs expose packages to clients. To see the packages available in a PPA, navigate to
-https://launchpad.net/~<team or username>/+archive/ubuntu/<ppa name> and look in "Overview of
-published packages".
+:samp:`https://launchpad.net/~{<team or username>}/+archive/ubuntu/{<ppa name>}`
+and look in "Overview of published packages".
 
 The process of consuming a PPA depends on whether the PPA is public or private.
 
@@ -31,7 +31,7 @@ Consuming private PPAs
 
 To consume a private PPA, access must be granted by the PPA owner. To check a private PPA:
 
-* Go to the launchpad user page: launchpad.net/~<username>
+* Go to the Launchpad user page :samp:`https://launchpad.net/~{<username>}`
 * Go to "View your private PPA subscriptions" in the PPA section
 * Click "View" in the PPA you wish to consume
 * Copy the source lines into a file
