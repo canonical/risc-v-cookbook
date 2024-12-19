@@ -9,14 +9,13 @@ https://github.com/canonical/snapd/blob/master/gadget/gadget.go
 A description is provided in section Gadget.yaml - Specification of
 https://snapcraft.io/docs/the-gadget-snap.
 
-Here is a list of relevant part of the field hierarchy as of Snapd 2.67:
+Here is a list the relevant part of the field hierarchy as of Snapd 2.67:
 
 .. code-block:: text
 
     -volumes,omitempty (map[string]*Volume)
      |-<Key> (string)
      | <Value> (*Volume)
-     | |-partial,omitempty ([]PartialProperty)
      | |-schema (string) enum:emmc,gpt,mbr
      | |-bootloader (string) enum:android-boot,grub,lk,piboot
      | |-id (string)
