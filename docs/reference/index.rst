@@ -9,3 +9,4 @@ Reference
 
    gadget-definition
    image-definition
+   image-checklist
