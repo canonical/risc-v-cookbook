@@ -13,33 +13,11 @@ It will guide you through these steps of your project:
 * Build packages
 * Build the image
 
-Collect requirements
---------------------
+Please, start reading at the :doc:`Overview <overview/index>` chapter.
 
-For getting started you will have to create an overview of which aspects
-of current Ubuntu does not fulfill your needs. Typical items are:
+.. note::
 
-* vendor Linux kernel
-* vendor Xorg and Mesa packages
-* vendor U-Boot required on the image
-* additional packages
-* configuration files
-
-Next identify the licenses and other legal requirements like non-disclosure
-agreements of the extra required packages.
-
-If source code must not be disclosed to the public,
-private personal package archives (PPAs) on Launchpad can be used.
-
-Setup Launchpad
----------------
-
-Build packages
---------------
-
-Build the image
----------------
-
+   **This documentation is still in draft status.**
 
 Contributing
 ------------
@@ -58,6 +36,7 @@ https://github.com/canonical/risc-v-cookbook.
    :hidden:
    :maxdepth: 2
 
+   overview/index
    tutorial/index
    howto/index
    reference/index
