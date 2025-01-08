@@ -62,6 +62,7 @@ Untar
 untarred
 usr
 utilize
+wokeignore
 Xorg
 xz
 yaml
