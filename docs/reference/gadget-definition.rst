@@ -4,7 +4,7 @@ Gadget.yaml fields
 ==================
 
 The available fields of the gadget.yaml file are defined in
-https://github.com/canonical/snapd/blob/master/gadget/gadget.go
+https://github.com/canonical/snapd/blob/master/gadget/gadget.go .. wokeignore:rule=master
 
 A description is provided in section Gadget.yaml - Specification of
 https://snapcraft.io/docs/the-gadget-snap.
