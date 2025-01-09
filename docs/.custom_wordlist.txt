@@ -48,11 +48,13 @@ PPA's
 PPAs
 py
 repo
+reStructured
 risc
 rsa
 runtime
 samp
 sftp
+ShareAlike
 snapcraft
 snapd
 Snapd

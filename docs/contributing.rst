@@ -1,11 +1,5 @@
 .. SPDX-License-Identifier: CC-BY-SA-4.0
 
-:orphan:
-
-.. TODO: Replace all mentions of ACME with your project name
-.. TODO: Update all sections containing TODOs; make sure no TODOs are left
-
-
 How to contribute
 =================
 
@@ -19,11 +13,10 @@ Here's how and why you can get involved:
 - **What do you get?** Personal growth, recognition for your contributions,
   early access to new features and the joy of seeing your work appreciated.
 
-- **Start early, start easy**: Dive into code contributions,
-  improve documentation, or be among the first testers.
+- **Start early, start easy**:
+  Improve documentation, or provide examples.
   Your presence matters,
   regardless of experience or the size of your contribution.
-
 
 The guidelines below will help keep your contributions effective and meaningful.
 
@@ -38,11 +31,15 @@ When contributing, you must abide by the
 License and copyright
 ---------------------
 
-.. TODO: Update with your license details or drop if excessive
+All contributions must use the
+`Attribution-ShareAlike 4.0 International <https://creativecommons.org/licenses/by-sa/4.0/legalcode>`_
+(CC BY-SA 4.0) license.
 
-By default, all contributions to ACME are made under the AGPLv3 license.
-See the `license <https://github.com/canonical/ACME/blob/main/COPYING>`_
-in the ACME GitHub repository for details.
+Please, add the following first line to each new document:
+
+.. code-block:: text
+
+   .. SPDX-License-Identifier: CC-BY-SA-4.0
 
 All contributors must sign the `Canonical contributor license agreement
 <https://ubuntu.com/legal/contributors>`_,
@@ -51,55 +48,31 @@ The author of a change remains the copyright owner of their code
 (no copyright assignment occurs).
 
 
-Releases and versions
----------------------
-
-.. TODO: Add your release and versioning details or drop if excessive
-
-ACME uses `semantic versioning <https://semver.org/>`_;
-major releases occur once or twice a year.
-
-The release notes can be found `TODO: here <https://example.com>`_.
-
-
 Environment setup
 -----------------
 
-.. TODO: Update with your prerequisites or drop if excessive
+For working on the documentation you will need:
 
-To work on the project, you need the following prerequisites:
-
-- `TODO: Prerequisite 1 <http://example.com>`_
-- `TODO: Prerequisite 2 <http://example.com>`_
-
-
-To install and configure these tools:
-
-.. code-block:: console
-
-   TODO: prerequisite command 1
-   TODO: prerequisite command 2
-
+* Python 3
+* make
+* git
+* a text editor
 
 Submissions
 -----------
 
-.. TODO: Suggest your own PR process or drop if excessive
+If you want to address an issue or a bug in the
+:doc:`index`
 
-If you want to address an issue or a bug in ACME,
-notify in advance the people involved to avoid confusion;
-also, reference the issue or bug number when you submit the changes.
-
-- `Fork
-  <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/about-forks>`_
-  our `GitHub repository <https://github.com/canonical/ACME>`_
+- Fork our Github repository
+  `<https://github.com/canonical/risc-v-cookbook>`__
   and add the changes to your fork,
   properly structuring your commits,
   providing detailed commit messages
   and signing your commits.
 
 - Make sure the updated project builds and runs without warnings or errors;
-  this includes linting, documentation, code and tests.
+  this includes running the checks described in <checks>_.
 
 - Submit the changes as a `pull request (PR)
   <https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request-from-a-fork>`_.
@@ -112,8 +85,6 @@ if approved, they will be eventually merged.
 Describing pull requests
 ~~~~~~~~~~~~~~~~~~~~~~~~
 
-.. TODO: Update with your own checklist or drop if excessive
-
 To be properly considered, reviewed and merged,
 your pull request must provide the following details:
 
@@ -122,51 +93,18 @@ your pull request must provide the following details:
 - **Description**: Explain the problem that your pull request solves.
   Mention any new features, bug fixes or refactoring.
 
-- **Relevant issues**: Reference any
-  `related issues, pull requests and repositories <https://docs.github.com/en/get-started/writing-on-github/working-with-advanced-formatting/autolinked-references-and-urls>`_.
-
-- **Testing**: Explain whether new or updated tests are included.
-
-- **Reversibility**: If you propose decisions that may be costly to reverse,
-  list the reasons and suggest steps to reverse the changes if necessary.
-
-
 Commit structure and messages
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-
-.. TODO: Update with your own guidelines or drop if excessive
 
 Use separate commits for each logical change,
 and for changes to different components.
 Prefix your commit messages with names of components they affect,
 using the code tree structure,
-e.g. start a commit that updates the ACME service with ``ACME/service:``.
-
-Use `conventional commits <https://www.conventionalcommits.org/>`_
-to ensure consistency across the project:
-
-.. code-block:: none
-
-   Ensure correct permissions and ownership for the content mounts
-    
-    * Work around an ACME issue regarding empty dirs:
-      https://github.com/canonical/ACME/issues/12345
-    
-    * Ensure the source directory is owned by the user running a container.
-
-   Links:
-   - ...
-   - ...
-
-
-Such structure makes it easier to review contributions
-and simplifies porting fixes to other branches.
-
+e.g. start a commit that updates the 'Create user' page with
+``create_user:``.
 
 Signing commits
 ~~~~~~~~~~~~~~~
-
-.. TODO: Update with your suggestions or drop if excessive
 
 To improve contribution tracking,
 we use the developer certificate of origin
@@ -180,104 +118,27 @@ or have the right to commit it as an open-source contribution.
 To sign off on a commit, use the ``--signoff`` option in ``git commit``.
 
 
-Code
-----
-
-Formatting and linting
-~~~~~~~~~~~~~~~~~~~~~~
-
-.. TODO: Update with your linting configuration setup or drop if excessive
-
-ACME relies on these formatting and linting tools:
-
-- `TODO: Tool 1 <http://example.com>`_
-- `TODO: Tool 2 <http://example.com>`_
-
-
-To configure and run them:
-
-.. code-block:: console
-
-   TODO: lint command 1
-   TODO: lint command 2
-
+Documentation
+-------------
 
 Structure
 ~~~~~~~~~
 
-- **Check linked code elements**:
-  Check that coupled code elements, files and directories are adjacent.
-  For instance, store test data close to the corresponding test code.
+We follow the `Diátaxis <https://diataxis.fr/>`_ methodology.
 
-- **Group variable declaration and initialization**:
-  Declare and initialize variables together
-  to improve code organization and readability.
+Formatting
+~~~~~~~~~~
 
-- **Split large expressions**:
-  Break down large expressions
-  into smaller self-explanatory parts.
-  Use multiple variables where appropriate
-  to make the code more understandable
-  and choose names that reflect their purpose.
+We use `Sphinx <https://www.sphinx-doc.org>`_ for generating the
+documentation from
+`reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_.  .. wokeignore:rule=master
 
-- **Use blank lines for logical separation**:
-  Insert a blank line between two logically separate sections of code.
-  This improves its structure and makes it easier to understand.
+We tend to use a maximum of 80 characters per line.
 
-- **Avoid nested conditions**:
-  Avoid nesting conditions to improve readability and maintainability.
+As the target format is HTML and the reStructured text only serves as source,
+putting new sentences in new lines saves you from superfluous reformatting.
 
-- **Remove dead code and redundant comments**:
-  Drop unused or obsolete code and comments.
-  This promotes a cleaner code base and reduces confusion.
-
-- **Normalize symmetries**:
-  Treat identical operations consistently, using a uniform approach.
-  This also improves consistency and readability.
-
-
-Best practices
-~~~~~~~~~~~~~~
-
-.. TODO: Update with your best practices or drop if excessive
-
-
-Tests
------
-
-.. TODO: Update with your testing framework details or drop if excessive
-
-All code contributions must include tests.
-
-To run the tests locally before submitting your changes:
-
-.. code-block:: console
-
-   TODO: test command 1
-   TODO: test command 2
-
-
-Documentation
--------------
-
-ACME's documentation is stored in the ``docs`` directory of the repository.
-It is based on the `Canonical starter pack
-<https://canonical-starter-pack.readthedocs-hosted.com/latest/>`_
-and hosted on `Read the Docs <https://about.readthedocs.com/>`_.
-
-For syntax help and guidelines,
-refer to the `Canonical style guides
-<https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/#style-guides>`_.
-
-In structuring,
-the documentation employs the `Diátaxis <https://diataxis.fr/>`_ approach.
-
-To run the documentation locally before submitting your changes:
-
-.. code-block:: console
-
-   make run
-
+.. checks:
 
 Automatic checks
 ~~~~~~~~~~~~~~~~
