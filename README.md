@@ -1,15 +1,22 @@
-# risc-v-cookbook
-Documentation on how to build and manage custom Ubuntu images for RISC-V boards.
+# RISC-V Image Cookbook
 
-The generated documenation is available at
+The RISC-V Image Cookbook is meant to help users to spin Ubuntu based images
+for hardware that is not yet supported by the Ubuntu distribution.
+
+It will guide you through these steps of your project:
+
+* Collect requirements
+* Setup Launchpad
+* Build packages
+* Build the image
+* Test the image
+
+The generated documenation is hosted at
 https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/.
 
 The continuous integration results are available at
 https://github.com/canonical/risc-v-cookbook/actions/.
 
-To overcome problems with the woke check use an inline comment like:
+## How to contribute
 
-    This is a forbidden word. .. wokeignore:rule=forbidden
-
-The rules are listed in
-https://raw.githubusercontent.com/canonical/Inclusive-naming/main/config.yml.
+See doc/contributing.rst
