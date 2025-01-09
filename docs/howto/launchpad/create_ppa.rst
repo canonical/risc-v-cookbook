@@ -27,6 +27,8 @@ In the list *Existing PPAs* you will see you new PPA.
 
 Click the provided link to show the overview page of your PPA.
 
+See :doc:`upload_ppa` and :doc:`consume_ppa` for further steps.
+
 Change build architecture
 -------------------------
 
