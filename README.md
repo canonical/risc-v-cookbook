@@ -11,7 +11,7 @@ It will guide you through these steps of your project:
 * Build the image
 * Test the image
 
-The generated documenation is hosted at
+The generated documentation is hosted at
 https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/.
 
 The continuous integration results are available at
