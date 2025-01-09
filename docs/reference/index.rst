@@ -7,6 +7,6 @@ Reference
 .. toctree::
    :maxdepth: 1
 
-   gadget-definition
-   image-definition
-   image-checklist
+   gadget_definition
+   image_definition
+   image_checklist

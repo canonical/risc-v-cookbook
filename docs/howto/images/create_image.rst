@@ -43,7 +43,7 @@ At a minimum the Gadget definition consists of
 The YAML file format is described in https://yaml.org/spec/.
 
 An overview of the available fields in gadget.yaml is provided in
-:doc:`/reference/gadget-definition/`.
+:doc:`/reference/gadget_definition/`.
 
 The gadget definition is provided as a Yaml file meta/gadget.yaml.
 gadget.yaml describes

@@ -57,6 +57,13 @@ This process is described in:
 Build the image
 ---------------
 
-The image create process is described in:
+The image creation process is described in:
 
-* :doc:`../howto/images/create_image/`
+* :doc:`../howto/images/create_image`
+
+Test the image
+--------------
+
+A checklist for images is available at:
+
+* :doc:`../reference/image_checklist`
