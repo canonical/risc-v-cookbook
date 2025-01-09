@@ -12,6 +12,7 @@ It will guide you through these steps of your project:
 * Setup Launchpad
 * Build packages
 * Build the image
+* Test the image
 
 Please, start reading at the :doc:`Overview <overview/index>` chapter.
 

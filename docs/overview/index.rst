@@ -12,6 +12,7 @@ It will guide you through these steps of your project:
 * Setup Launchpad
 * Build packages
 * Build the image
+* Test the image
 
 .. note::
 
