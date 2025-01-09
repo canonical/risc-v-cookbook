@@ -148,8 +148,18 @@ to verify spelling, validate links and suggest inclusive language.
 
 You can (and should) run the same checks locally:
 
-.. code-block:: console
+.. prompt:: bash $ auto
 
-   make spelling
-   make linkcheck
-   make woke
+   $ make spelling
+   $ make linkcheck
+   $ make woke
+
+To overcome problems with the woke check an inline comment like the following
+may be needed:
+
+.. code-block:: text
+
+    This is a forbidden word. .. wokeignore:rule=forbidden
+
+The rules are listed in
+https://raw.githubusercontent.com/canonical/Inclusive-naming/main/config.yml.
