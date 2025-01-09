@@ -11,6 +11,11 @@ It will guide you through these steps of your project:
 * Build the image
 * Test the image
 
+## Project home page
+
+The project git repository is located at
+https://github.com/canonical/risc-v-cookbook/.
+
 The generated documentation is hosted at
 https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/.
 
