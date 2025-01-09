@@ -1,3 +1,5 @@
+addquestion
+amd
 artifacts
 autodetection
 Autotools
