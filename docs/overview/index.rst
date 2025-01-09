@@ -36,6 +36,11 @@ agreements of the extra required packages.
 If source code must not be disclosed to the public,
 private personal package archives (PPAs) on Launchpad can be used.
 
+Here is a typical workflow:
+
+.. image:: /images/workflow.png
+   :alt: Typical workflow
+
 Setup Launchpad
 ---------------
 
