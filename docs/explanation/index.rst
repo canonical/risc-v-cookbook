@@ -3,8 +3,7 @@
 Explanation
 ===========
 
+Nothing here, yet.
 
 .. toctree::
    :maxdepth: 1
-
-   self
