@@ -38,9 +38,25 @@ private personal package archives (PPAs) on Launchpad can be used.
 Setup Launchpad
 ---------------
 
+Please, follow in sequence these chapters:
+
+* :doc:`../howto/launchpad/create_user`
+* :doc:`../howto/launchpad/create_team`
+* :doc:`../howto/launchpad/create_ppa`
+
 Build packages
 --------------
+
+This process is described in:
+
+* :doc:`../howto/packaging/package`
+* :doc:`../howto/launchpad/upload_ppa`
+* :doc:`../howto/launchpad/consume_ppa`
+* :doc:`../howto/packaging/repackage`
 
 Build the image
 ---------------
 
+The image create process is described in:
+
+* :doc:`../howto/images/create_image/`
