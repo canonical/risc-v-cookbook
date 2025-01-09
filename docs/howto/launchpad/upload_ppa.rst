@@ -22,7 +22,8 @@ To upload to an existing PPA:
 * Navigate to your Debian package source directory. This is the directory where the
   debian/ folder is.
 * Ensure that the Debian version is correctly set up. See :ref:`Debian version numbering`.
-* If necessary, create an orig.tar.xz of the sources. See :ref:`Creating a .tar.xz`.
+* If necessary, create a source archive (orig.tar.xz).
+  See :ref:`create_source_archive`.
 * Build the package:
 
   .. code:: bash
@@ -107,12 +108,12 @@ a ``debian-revision``. Changes that only increase the ``debian-revision`` must a
 ``debian/`` folder. Examples include updating patches in ``debian/patches`` or modifying
 packaging scripts.
 
-.. _Creating a .tar.xz:
+.. _create_source_archive:
 
-Creating a .tar.xz
-------------------
+Create source archive
+---------------------
 
-When uploading to a PPA, it is necessary to provide a ``.tar.xz`` file containing the
+When uploading to a PPA, it is necessary to provide an archive containing the
 source code that needs to be built.
 
 For **native Debian packages** (i.e., packages without the ``debian-revision`` field in
@@ -131,4 +132,3 @@ If not present, this can be created from the Debian source directory:
   .. code-block:: bash
 
     tar -cJf ../<package_name>_<upstream-version>.orig.tar.xz --exclude=debian .
-
