@@ -46,13 +46,20 @@ https://github.com/canonical/risc-v-cookbook.
    contributing
 
 
+.. grid:: 1 1 1 1
+
+   .. grid-item-card:: :doc:`Overview <overview/index>`
+      :link: overview/index
+      :link-type: doc
+
+      **Start here** to get an overview of an image creation project
 .. grid:: 1 1 2 2
 
    .. grid-item-card:: :doc:`Tutorial <tutorial/index>`
       :link: tutorial/index
       :link-type: doc
 
-      **Start here**: a hands-on introduction to Example Product for new users
+      **First steps** - hands-on introductions
 
    .. grid-item-card:: :doc:`How-to guides <howto/index>`
       :link: howto/index
@@ -61,7 +68,6 @@ https://github.com/canonical/risc-v-cookbook.
       **Step-by-step guides** covering key operations and common tasks
 
 .. grid:: 1 1 2 2
-   :reverse:
 
    .. grid-item-card:: :doc:`Reference <reference/index>`
       :link: reference/index
