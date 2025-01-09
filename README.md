@@ -17,6 +17,22 @@ https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/.
 The continuous integration results are available at
 https://github.com/canonical/risc-v-cookbook/actions/.
 
+## Building
+
+    cd docs/
+    make html
+    make spellcheck
+    make linkcheck
+    make wokecheck
+
+Serve the HTML pages on http://127.0.0.1:8080
+
+    make serve
+
 ## How to contribute
 
 See doc/contributing.rst
+
+## License
+
+CC-BY-SA-4.0 (https://creativecommons.org/licenses/by-sa/4.0/)
