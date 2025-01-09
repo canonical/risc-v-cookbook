@@ -59,6 +59,7 @@ Build the image
 
 The image creation process is described in:
 
+* :doc:`../tutorial/create_image`
 * :doc:`../howto/images/create_image`
 
 Test the image
