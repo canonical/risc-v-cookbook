@@ -110,3 +110,62 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | | |-name (string)
     | | |-compression (string) enum:uncompressed,bzip2,gzip,xz,zstd
     |-class (string) enum:preinstalled,cloud,installer
+
+Here is an example:
+
+.. code-block:: yaml
+
+   ---
+   name: ubuntu-server-riscv64-preinstalled
+   display-name: Ubuntu Server RISC-V preinstalled
+   revision: 1
+   architecture: riscv64
+   series: noble
+   class: preinstalled
+   kernel: linux-image-generic
+   gadget:
+     url: "https://github.com/canonical/risc-v-gadget.git"
+     type: "git"
+     branch: "main"
+   rootfs:
+     archive: ubuntu
+     sources-list-deb822: true
+     components:
+       - main
+       - restricted
+       - universe
+       - multiverse
+     mirror: "http://ports.ubuntu.com/ubuntu-ports/"
+     pocket: updates
+     seed:
+       urls:
+         - "https://git.launchpad.net/~ubuntu-core-dev/ubuntu-seeds/+git/"
+       branch: noble
+       names:
+         - cloud-image
+         - server
+         - minimal
+         - standard
+   customization:
+     extra-packages:
+       - name: "flash-kernel"
+       - name: "grub-efi-riscv64"
+     extra-snaps:
+       - name: snapd
+     fstab:
+       - label: "writable"
+         mountpoint: "/"
+         filesystem-type: "ext4"
+         dump: false
+         fsck-order: 1
+       - label: "esp"
+         mountpoint: "/boot/efi"
+         filesystem-type: "vfat"
+         mount-options: "defaults"
+         dump: false
+         fsck-order: 1
+   artifacts:
+     img:
+       - name: ubuntu-24.04-preinstalled-server-riscv64.img
+     manifest:
+       name: ubuntu-24.04-preinstalled-server-riscv64.manifest
