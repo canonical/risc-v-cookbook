@@ -5,6 +5,7 @@ autodetection
 Autotools
 buildpackage
 changelog
+chroot
 CMake
 compat
 config
@@ -17,10 +18,12 @@ debhelper
 Debhelper
 debian
 debmake
+dev
 DEP
 dh
 dpkg
 dput
+dsc
 fulfill
 gibibytes
 github
@@ -55,6 +58,7 @@ risc
 rsa
 runtime
 samp
+sbuild
 sftp
 ShareAlike
 snapcraft
