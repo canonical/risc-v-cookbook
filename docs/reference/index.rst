@@ -10,3 +10,4 @@ Reference
    gadget_definition
    image_definition
    image_checklist
+   tools
