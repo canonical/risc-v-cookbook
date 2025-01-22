@@ -100,7 +100,6 @@ sp-clean: sp-clean-doc
 	rm -rf $(VENVDIR)
 	rm -rf $(SPHINXDIR)/node_modules/
 	rm -rf $(SPHINXDIR)/styles
-	rm -rf $(SPHINXDIR)/vale.ini
 
 sp-clean-doc:
 	git clean -fx "$(BUILDDIR)"

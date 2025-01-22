@@ -13,5 +13,4 @@ __pycache__
 .idea/
 .vscode/
 .sphinx/styles/*
-.sphinx/vale.ini
 sp-docs/_build
