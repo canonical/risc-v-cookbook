@@ -130,8 +130,7 @@ Formatting
 ~~~~~~~~~~
 
 We use `Sphinx <https://www.sphinx-doc.org>`_ for generating the
-documentation from
-`reStructured Text <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_.  .. wokeignore:rule=master
+documentation from **reStructured Text**. Refer to our `reStructuredText style guide <https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/>`_ for basic guidance.
 
 We tend to use a maximum of 80 characters per line.
 
