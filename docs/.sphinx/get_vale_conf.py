@@ -41,13 +41,15 @@ def main():
         )
         file.write(download.text)
         file.close()
-    config = requests.get(
-        "https://raw.githubusercontent.com/canonical/praecepta/main/vale.ini"
-    )
-    file = open(".sphinx/vale.ini", "w")
-    file.write(config.text)
-    file.close()
-
+    if os.path.exists(f"{DIR}/.sphinx/vale.ini"):
+        print("Vale config file exists")
+    else:
+        config = requests.get(
+            "https://raw.githubusercontent.com/canonical/praecepta/main/vale.ini"
+        )
+        file = open(".sphinx/vale.ini", "w")
+        file.write(config.text)
+        file.close()
 
 if __name__ == "__main__":
     main()
