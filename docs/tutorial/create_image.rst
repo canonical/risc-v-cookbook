@@ -38,7 +38,7 @@ For running the image in a virtual machine install the runtime dependencies.
 
 .. prompt:: text $ auto
 
-    $ sudo apt-get install opensbi u-boot-qemu
+    $ sudo apt-get install opensbi qemu-system-riscv64 u-boot-qemu
 
 Navigate to the image and change the owner.
 
