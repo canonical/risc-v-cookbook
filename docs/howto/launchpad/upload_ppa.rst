@@ -59,6 +59,33 @@ To upload to an existing PPA:
 
 .. _Debian version numbering:
 
+
+Uploading to private PPAs
+-------------------------
+
+Uploads to a private PPA should use transport encryption.
+
+Add the following to ~/.dput.cf:
+
+.. code:: bash
+
+    [ssh-ppa]
+    fqdn                    = ppa.launchpad.net
+    method                  = sftp
+    incoming                = ~%(ssh-ppa)s
+    login                   = <username>
+
+Replace <username> by your actual username.
+
+Now you can upload using ssh encryption with
+
+  .. code:: bash
+
+    dput ssh-ppa:<team>/<ppa> <source.changes>
+
+This requires that you have uploaded your public ssh key to Launchpad,
+see `add-ssh-key`.
+
 Debian version numbering
 ------------------------
 
