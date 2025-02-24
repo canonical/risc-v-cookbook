@@ -5,7 +5,8 @@
 Create Git Repository in Launchpad
 ==================================
 
-Git repositories can be created in Launchpad for users or teams.
+Git repositories can be created in Launchpad for users or teams
+(both public and private).
 
 For using Launchpad git repositories you must
 :ref:`add an SSH key to your user <add-ssh-key>`.
