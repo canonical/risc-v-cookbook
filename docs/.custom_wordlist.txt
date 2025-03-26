@@ -21,6 +21,7 @@ debmake
 dev
 DEP
 dh
+dirs
 dpkg
 dput
 dsc

@@ -111,6 +111,21 @@ Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
     | | |-compression (string) enum:uncompressed,bzip2,gzip,xz,zstd
     |-class (string) enum:preinstalled,cloud,installer
 
+Execution sequence
+------------------
+
+The manual steps are executed in this sequence:
+
+* make-dirs
+* copy-file
+* execute
+* touch-file
+* add-group
+* add-user
+
+Example
+-------
+
 Here is an example:
 
 .. code-block:: yaml
