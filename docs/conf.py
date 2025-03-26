@@ -91,7 +91,7 @@ html_context = {
     # 'github_version': 'main',
 
     # Docs location in the repo; used in links for viewing the source files
-    "github_folder": "/docs/",
+    "repo_folder": "/docs/",
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
