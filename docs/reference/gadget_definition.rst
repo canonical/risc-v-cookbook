@@ -3,11 +3,10 @@
 Gadget.yaml fields
 ==================
 
-The available fields of the gadget.yaml file are defined in
-https://github.com/canonical/snapd/blob/master/gadget/gadget.go .. wokeignore:rule=master
+The available fields of the :file:`gadget.yaml` file are defined in
+`snapd/gadget/gadget.go <https://github.com/canonical/snapd/blob/master/gadget/gadget.go>`_.
 
-A description is provided in section Gadget.yaml - Specification of
-https://snapcraft.io/docs/the-gadget-snap.
+A description is provided in the `Gadget.yaml <https://snapcraft.io/docs/the-gadget-snap>`_ section of the Gadget snaps specification.
 
 Here is a list the relevant part of the field hierarchy as of Snapd 2.67:
 
