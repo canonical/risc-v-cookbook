@@ -56,8 +56,7 @@ ogp_image = \
 
 
 # Product favicon; shown in bookmarks, browser tabs, etc.
-
-html_favicon = '.sphinx/_static/favicon.png'
+#html_favicon = '.sphinx/_static/favicon.png'
 
 
 # Dictionary of values to pass into the Sphinx context for all pages:
@@ -88,10 +87,13 @@ html_context = {
     "github_url": "https://github.com/canonical/risc-v-cookbook",
 
     # Docs branch in the repo; used in links for viewing the source files
-    # 'github_version': 'main',
+    # 'repo_default_branch': 'main',
 
     # Docs location in the repo; used in links for viewing the source files
     "repo_folder": "/docs/",
+
+    # Required for feedback button
+    'github_issues': 'enabled',
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
@@ -104,8 +106,8 @@ html_context = {
 
 # Template and asset locations
 
-html_static_path = [".sphinx/_static"]
-templates_path = [".sphinx/_templates"]
+html_static_path = []
+templates_path = []
 
 
 #############
@@ -234,28 +236,3 @@ rst_prolog = """
 
 if "discourse_prefix" not in html_context and "discourse" in html_context:
     html_context["discourse_prefix"] = html_context["discourse"] + "/t/"
-
-#####################
-# PDF configuration #
-#####################
-
-latex_additional_files = [
-    "./.sphinx/fonts/Ubuntu-B.ttf",
-    "./.sphinx/fonts/Ubuntu-R.ttf",
-    "./.sphinx/fonts/Ubuntu-RI.ttf",
-    "./.sphinx/fonts/UbuntuMono-R.ttf",
-    "./.sphinx/fonts/UbuntuMono-RI.ttf",
-    "./.sphinx/fonts/UbuntuMono-B.ttf",
-    "./.sphinx/images/Canonical-logo-4x.png",
-    "./.sphinx/images/front-page-light.pdf",
-    "./.sphinx/images/normal-page-footer.pdf",
-]
-
-latex_engine = "xelatex"
-latex_show_pagerefs = True
-latex_show_urls = "footnote"
-
-with open(".sphinx/latex_elements_template.txt", "rt") as file:
-    latex_config = file.read()
-
-latex_elements = ast.literal_eval(latex_config.replace("$PROJECT", project))
