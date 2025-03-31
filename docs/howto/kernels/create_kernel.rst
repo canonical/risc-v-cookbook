@@ -3,24 +3,13 @@
 Create a Custom Kernel with ukpack
 ==================================
 
-This guide explains how to create a custom Linux kernel package using `ukpack`.
+This guide explains how to create a custom Linux kernel package using the
+tool `ukpack`. To create a kernel package a Git repository containing a custom
+kernel tree is needed. The repository should be based on an upstream Linux
+kernel version ``<kernel_version>``.
 
-Prerequisites
--------------
-
-Ensure you have the necessary dependencies installed:
-
-.. prompt:: bash $ auto
-
-    $ sudo apt-get update
-    $ sudo apt-get install git wget devscripts
-
-Custom Kernel Tree
-------------------
-
-To create a kernel package a Git repository containing a custom kernel tree is needed. The
-repository should be based on an upstream Linux kernel version, which will be referred to
-as ``<kernel_version>`` in the following steps and should contain any necessary modifications.
+Please, execute the :doc:`/tutorial/create_kernel` tutorial.
+This provides a sample project.
 
 Clone Required Repositories
 ---------------------------
