@@ -25,6 +25,7 @@ dirs
 dpkg
 dput
 dsc
+EXTRAVERSION
 fulfill
 gibibytes
 github
@@ -40,6 +41,7 @@ Initialize
 io
 Keyid
 labeled
+linux
 lp
 lpbug
 MBR

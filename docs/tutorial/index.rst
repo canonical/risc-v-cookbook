@@ -8,3 +8,4 @@ Tutorials
    :maxdepth: 1
 
    create_image
+   create_kernel
