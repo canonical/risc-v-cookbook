@@ -67,7 +67,9 @@ snapd
 Snapd
 SPDX
 standardized
+toml
 ubuntu
+ukpack
 unformatted
 Untar
 untarred
