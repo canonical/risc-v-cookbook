@@ -52,8 +52,8 @@ official upstream Linux kernel ``6.6.20``.
       custom-linux
     $ cd custom-linux/
 
-Modify the Kernel (dummy change for the tutorial)
--------------------------------------------------
+Make an Example Change to the Kernel
+------------------------------------
 
 To simulate a custom kernel for this tutorial, here we modify the `EXTRAVERSION`
 field in the `Makefile`. Here is where you should apply your changes.
