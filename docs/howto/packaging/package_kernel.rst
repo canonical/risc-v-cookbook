@@ -1,7 +1,7 @@
 .. SPDX-License-Identifier: CC-BY-SA-4.0
 
-Create a Custom Kernel with ukpack
-==================================
+Package a Custom Kernel with ukpack
+===================================
 
 This guide explains how to create a custom Linux kernel package using the
 tool `ukpack`. To create a kernel package a Git repository containing a custom
