@@ -7,4 +7,5 @@ Packaging
    :maxdepth: 2
 
    package
+   package_kernel
    repackage
