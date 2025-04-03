@@ -1,3 +1,5 @@
+[![Documentation Status](https://readthedocs.com/projects/canonical-risc-v-cookbook/badge/?version=latest)](https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/?badge=latest)
+
 # RISC-V Image Cookbook
 
 The RISC-V Image Cookbook is meant to help users to spin Ubuntu based images
