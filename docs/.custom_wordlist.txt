@@ -26,6 +26,7 @@ dpkg
 dput
 dsc
 EXTRAVERSION
+flavour
 fulfill
 gibibytes
 github

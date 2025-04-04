@@ -20,12 +20,6 @@ First, clone the `ukpack` repository:
 
     $ git clone https://kernel.ubuntu.com/forgejo/esmil/ukpack.git
 
-Then, download the upstream Linux kernel source from which the custom kernel is based:
-
-.. prompt:: bash $ auto
-
-    $ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-<kernel_version>.tar.xz
-
 Next, clone the custom kernel repository:
 
 .. prompt:: bash $ auto
@@ -42,7 +36,9 @@ as a remote and fetch a specific tag:
 .. prompt:: bash $ auto
 
     $ git remote add linux-stable https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-    $ git fetch --depth 1 linux-stable tag v<kernel_version>
+    $ git fetch --no-tags linux-stable tag v<kernel_version>
+
+It can be checked that the tag is there with ``git tag | grep v<kernel_version>``.
 
 Create Kernel Package Configuration
 -----------------------------------
@@ -52,13 +48,21 @@ file with the following content:
 
 .. code:: text
 
-    your_kernel (<kernel_version>-<local_version>) noble; urgency=medium
+    linux-<custom_flavour> (<kernel_version>-<local_version>) <release>; urgency=medium
+
      * Initial packaging
+
      -- Your Name <your_email@example.com> Wed, DD MMM YYYY HH:MM:SS +TZ
     ---
     arch = "<your_architecture>"
-    config = "arch/<your_architecture>/configs/your_defconfig"
+    # provide your full kernel configuration
+    #config = "./my.config"
+    # ..a defconfig file
+    #config = "./my_defconfig"
+    # ..or just use the architecture's upstream defconfig
+    config = "defconfig"
     orig = "v<kernel_version>"
+
     [pkg.source]
     Maintainer = "your_email@example.com"
 
@@ -70,12 +74,14 @@ a changelog entry on top of the last one.
 Build the Kernel Package
 ------------------------
 
-Create an output directory outside your kernel tree and run `ukpack`:
+Download the Linux kernel version on which the custom kernel is currently based, create an output
+directory outside your kernel tree, and run `ukpack`:
 
 .. prompt:: bash $ auto
 
+    $ wget -P .. https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-<kernel_version>.tar.xz
     $ mkdir ../ukpack.output/
-    $ ../ukpack/ukpack -o ../linux-<kernel_version>.tar.xz -t . -d ../ukpack.output/ your_kernel.toml
+    $ ../ukpack/ukpack -o ../linux-<kernel_version>.tar.xz -d ../ukpack.output/ your_kernel.toml
 
 Sign the Package
 ----------------
