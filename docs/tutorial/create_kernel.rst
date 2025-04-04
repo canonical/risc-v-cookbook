@@ -26,18 +26,11 @@ Ensure the required packages are installed:
 Clone Required Repositories
 ---------------------------
 
-First, clone the `ukpack` repository:
+Clone the `ukpack` repository:
 
 .. prompt:: bash $ auto
 
     $ git clone https://kernel.ubuntu.com/forgejo/esmil/ukpack.git
-
-Next, download the upstream Linux kernel source on which the custom kernel is
-based, in our case this is version ``6.6.20``:
-
-.. prompt:: bash $ auto
-
-    $ wget https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.20.tar.xz
 
 Create a Custom Kernel Repository
 ---------------------------------
@@ -79,10 +72,10 @@ is based on:
 
     $ git remote add linux-stable \
       https://git.kernel.org/pub/scm/linux/kernel/git/stable/linux.git
-    $ git fetch --depth 1 linux-stable tag v6.6.20
+    $ git fetch --no-tags linux-stable tag v6.6.20
 
 This tag will be used to produce a diff between the custom kernel tree and the
-upstream one.
+upstream one. That the tag is correctly fetched can be checked with ``git tag | grep v6.6.20``.
 
 Define the Kernel Package Configuration
 ---------------------------------------
@@ -91,26 +84,38 @@ Inside the `custom-linux` directory, create a `custom_kernel.toml` file:
 
 .. code:: text
 
-    custom-kernel (6.6.20-1.1ubuntu1) noble; urgency=medium
+    linux-tutorial (6.6.20-1.1ubuntu1) noble; urgency=medium
+
      * Initial packaging
+
      -- Your Name <you_email@example.com> Wed, 12 Mar 2025 14:02:38 +0100
     ---
     arch = "riscv64"
-    config = "arch/riscv/configs/defconfig"
+    # Use the architecture's upstream defconfig
+    config = "defconfig"
     orig = "v6.6.20"
 
     [pkg.source]
     Maintainer = "your_email@example.com"
 
+The name of the kernel package should always be of the form `linux-<custom flavour>`, and the
+version should be of the form `<kernel_version>-<local_version>`, where `<kernel_version>` is
+the Linux kernel source on which the custom kernel is currently based. Also, this tutorial uses
+the `noble` Ubuntu release.
+
 Build the Kernel Package
 ------------------------
 
-Create an output directory and run `ukpack`:
+Download the Linux kernel source on which the custom kernel is currently based,
+which in this case this is Linux version ``6.6.20``, create an output directory
+outside your kernel tree, and run `ukpack`:
+
 
 .. prompt:: bash $ auto
 
+    $ wget -P .. https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.6.20.tar.xz
     $ mkdir ../ukpack.output/
-    $ ../ukpack/ukpack -o ../linux-6.6.20.tar.xz -t . \
+    $ ../ukpack/ukpack -o ../linux-6.6.20.tar.xz \
       -d ../ukpack.output/ custom_kernel.toml
 
 Sign the Package
