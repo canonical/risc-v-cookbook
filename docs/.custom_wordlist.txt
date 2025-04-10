@@ -44,6 +44,7 @@ labeled
 linux
 lp
 lpbug
+LXC
 MBR
 mebibytes
 newteam
@@ -69,6 +70,7 @@ snapd
 Snapd
 SPDX
 standardized
+sudo
 toml
 ubuntu
 ukpack

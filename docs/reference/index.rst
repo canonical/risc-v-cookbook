@@ -10,4 +10,5 @@ Reference
    gadget_definition
    image_definition
    image_checklist
+   kernel_testcases
    tools
