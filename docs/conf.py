@@ -1,5 +1,8 @@
 import datetime
-import ast
+
+from docutils.parsers.rst import roles
+from sphinx.util.docutils import SphinxRole
+from docutils import nodes
 
 # Configuration for the Sphinx documentation builder.
 # All configuration specific to your project should be done in this file.
@@ -51,12 +54,11 @@ ogp_site_name = project
 
 # Preview image URL
 
-ogp_image = \
-    "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
+ogp_image = "https://assets.ubuntu.com/v1/253da317-image-document-ubuntudocs.svg"
 
 
 # Product favicon; shown in bookmarks, browser tabs, etc.
-#html_favicon = '.sphinx/_static/favicon.png'
+# html_favicon = '.sphinx/_static/favicon.png'
 
 
 # Dictionary of values to pass into the Sphinx context for all pages:
@@ -65,35 +67,27 @@ ogp_image = \
 html_context = {
     # Product page URL; can be different from product docs URL
     "product_page": "ubuntu.com",
-
     # Product tag image; the orange part of your logo, shown in the page header
     #
     # 'product_tag': '_static/tag.png',
-
     # Your Discourse instance URL
     # NOTE: If set, adding ':discourse: 123' to an .rst file
     #       will add a link to Discourse topic 123 at the bottom of the page.
     "discourse": "https://discourse.ubuntu.com",
-
     # Your Mattermost channel URL
     "mattermost": "",
-
     # Your Matrix channel URL
     "matrix": "",
-
     # Your documentation GitHub repository URL
     # NOTE: If set, links for viewing the documentation source files
     #       and creating GitHub issues are added at the bottom of each page.
     "github_url": "https://github.com/canonical/risc-v-cookbook",
-
     # Docs branch in the repo; used in links for viewing the source files
     # 'repo_default_branch': 'main',
-
     # Docs location in the repo; used in links for viewing the source files
     "repo_folder": "/docs/",
-
     # Required for feedback button
-    'github_issues': 'enabled',
+    "github_issues": "enabled",
 }
 
 # Project slug; see https://meta.discourse.org/t/what-is-category-slug/87897
@@ -134,10 +128,7 @@ redirects = {}
 #
 # TODO: Remove or adjust the ACME entry after you update the contributing guide
 
-linkcheck_ignore = [
-    "http://127.0.0.1:8000",
-    "https://github.com/canonical/ACME/*"
-]
+linkcheck_ignore = ["http://127.0.0.1:8000", "https://github.com/canonical/ACME/*"]
 
 
 # A regex list of URLs where anchors are ignored by 'make linkcheck'
@@ -236,3 +227,27 @@ rst_prolog = """
 
 if "discourse_prefix" not in html_context and "discourse" in html_context:
     html_context["discourse_prefix"] = html_context["discourse"] + "/t/"
+
+# Redefine the Sphinx 'command' role to behave/render like 'literal'
+
+
+class CommandRole(SphinxRole):
+    def run(self):
+        text = self.text
+        node = nodes.literal(text, text)
+        return [node], []
+
+
+def setup(app):
+    roles.register_local_role("command", CommandRole())
+
+
+# Define a custom role for package-name formatting
+
+
+def pkg_role(name, rawtext, text, lineno, inliner, options={}, content=[]):
+    node = nodes.literal(rawtext, text)
+    return [node], []
+
+
+roles.register_local_role("pkg", pkg_role)
