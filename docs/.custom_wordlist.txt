@@ -69,6 +69,7 @@ PPA
 PPA's
 PPAs
 py
+QEMU
 repo
 reStructured
 risc
