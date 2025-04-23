@@ -50,7 +50,7 @@ The following describes a typical boot flow based on U-Boot.
   before entering the main kernel code.
 
 .. image:: /images/bootflow.svg
-   :target: /_images/bootflow.svg
+   :target: ../../_images/bootflow.svg
    :alt: RISC-V Boot Flow
 
 Device-trees
@@ -72,5 +72,5 @@ link /boot/dtb-<kernel-version>. Next grub-update is running. Script
 finds the file /boot/dtb-<kernel-version>.
 
 .. image:: /images/kernel_update.svg
-   :target: /_images/kernel_update.svg
+   :target: ../../_images/kernel_update.svg
    :alt: RISC-V Kernel Update
