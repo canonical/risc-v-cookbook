@@ -126,7 +126,7 @@ redirects = {}
 
 # A regex list of URLs that are ignored by 'make linkcheck'
 
-linkcheck_ignore = ["http://127.0.0.1:8000", "^\/_images\/"]
+linkcheck_ignore = ["http://127.0.0.1:8000", r".*\/_images\/"]
 
 
 # A regex list of URLs where anchors are ignored by 'make linkcheck'
