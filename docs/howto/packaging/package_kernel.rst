@@ -43,8 +43,9 @@ It can be checked that the tag is there with ``git tag | grep v<kernel_version>`
 Create kernel package configuration
 -----------------------------------
 
-Inside the directory of your custom kernel repository (``your_custom_kernel``), create a ``your_kernel.toml``
-file with the following content:
+Inside the directory of your custom kernel repository (``your_custom_kernel``),
+create a file ``my_kernel.toml`` file (e.g. using the command
+``dch --create -c my_kernel.toml``) with the following content:
 
 .. code:: text
 
@@ -66,9 +67,10 @@ file with the following content:
     [pkg.source]
     Maintainer = "your_email@example.com"
 
-This file contains both configuration options (below the ``---``) and changelog entries keeping track
-of changes to your custom kernel. At first, this file has to be created manually, but on re-packaging,
-updates to this file can be done with the ``dch -c your_kernel.toml`` command, which automatically appends
+This file contains both configuration options (below the ``---``) and changelog
+entries keeping track of changes to your custom kernel. At first, this file has
+to be created manually, but on re-packaging, updates to this file can be done
+with the ``dch -c my_kernel.toml`` command, which automatically prepends
 a changelog entry on top of the last one.
 
 Build the kernel package
@@ -81,7 +83,7 @@ directory outside your kernel tree, and run ``ukpack``:
 
     $ wget -P .. https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-<kernel_version>.tar.xz
     $ mkdir ../ukpack.output/
-    $ ../ukpack/ukpack -o ../linux-<kernel_version>.tar.xz -d ../ukpack.output/ your_kernel.toml
+    $ ../ukpack/ukpack -o ../linux-<kernel_version>.tar.xz -d ../ukpack.output/ my_kernel.toml
 
 Sign the package
 ----------------
