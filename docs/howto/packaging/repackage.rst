@@ -57,6 +57,44 @@ Create source of binary package
       cp -R /path/to/source/package/xorg-server-21.1.13/debian \
             xorg-server-21.1.13/
 
+* A script like the following can help you to create the necessary install
+  files.
+
+  .. code:: bash
+
+      #!/bin/sh
+      #
+      # Assuming that you have deb packages in directory debs/ this script will
+      # determine the list of files contained in each package and create
+      # *.install files for each package in a new directory tmp_install/.
+      # Prior content of tmp_install/ will be deleted.
+
+      create_install() {
+        name=$1
+        file=$2
+        dir=$(mktemp -d)
+
+        echo "Processing $name"
+
+        dpkg -x $file $dir
+        find $dir -type f -o -type l | sed -e "s|$dir/||" \
+        | grep -v '/doc/' | grep -v '/bug/' \
+        > "tmp_install/${name}.install"
+        rm -rf $dir
+      }
+
+      dir="tmp_install"
+
+      rm -rf tmp_install
+      mkdir tmp_install
+
+      find debs -name '*.deb' | while read -r file; do
+        name=$(echo $file | sed -e 's|.*\/\([^\_]*\)\_.*|\1|')
+        create_install $name $file
+      done
+
+      echo "Install files created in tmp_install"
+
 Edit Debian packaging
 ---------------------
 
