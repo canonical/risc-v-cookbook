@@ -129,7 +129,7 @@ We follow the `Diátaxis <https://diataxis.fr/>`_ methodology.
 Formatting
 ~~~~~~~~~~
 
-We use `Sphinx <https://www.sphinx-doc.org>`_ for generating the
+We use `Sphinx <https://www.sphinx-doc.org/en/master/>`_ for generating the
 documentation from **reStructured Text**. Refer to our `reStructuredText style guide <https://canonical-documentation-with-sphinx-and-readthedocscom.readthedocs-hosted.com/style-guide/>`_ for basic guidance.
 
 We tend to use a maximum of 80 characters per line.
