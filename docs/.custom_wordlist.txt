@@ -75,6 +75,7 @@ repo
 reStructured
 risc
 rsa
+rst
 runtime
 samp
 SBI
