@@ -5,6 +5,8 @@ Image-definition.yaml fields
 
 The available fields of the image-definition.yaml file are defined in
 https://github.com/canonical/ubuntu-image/blob/main/internal/imagedefinition/image_definition.go.
+A description is provided in
+https://github.com/canonical/ubuntu-image/blob/main/internal/imagedefinition/README.rst.
 
 Here is a list of the field hierarchy as of ubuntu-image 3.6.0:
 
