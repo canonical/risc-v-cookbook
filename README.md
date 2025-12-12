@@ -1,6 +1,11 @@
-[![Documentation Status](https://readthedocs.com/projects/canonical-risc-v-cookbook/badge/?version=latest)](https://canonical-risc-v-cookbook.readthedocs-hosted.com/en/latest/?badge=latest)
-
 # RISC-V Image Cookbook
+
+> ⚠️ **This repo is archived** ⚠️
+>
+> * New repo: https://github.com/canonical/ubuntu-hw-support
+> * Docs at: https://canonical-ubuntu-hardware-support.readthedocs-hosted.com/
+
+---
 
 The RISC-V Image Cookbook is meant to help users to spin Ubuntu based images
 for hardware that is not yet supported by the Ubuntu distribution.
